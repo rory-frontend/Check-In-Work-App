@@ -217,7 +217,7 @@ export default function Home() {
 
       {/* Random Popup */}
       {showPopup && (
-        <div className="fixed  left-0  flex items-center justify-center bg-black/0 p-4">
+        <div className="fixed inset-0  flex items-center justify-center bg-black/0 p-4">
           <div className="w-full max-w-sm rounded-lg bg-white p-6 text-center shadow-xl">
             <h3 className="mb-2 text-xl font-bold text-gray-800">Confirm You&apos;re Here</h3>
             <p className="mb-4 text-gray-600">
