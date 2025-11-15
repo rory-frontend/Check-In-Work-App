@@ -20,6 +20,7 @@ export default function Home() {
   const popupTimerRef = useRef<number | null>(null);
   const logRef = useRef<HTMLDivElement>(null);
   const initializedRef = useRef(false);
+  const checkedInLoggedRef = useRef(false);
   const popupCountRef = useRef(0); // synchronous popup count
 
   // Logging
@@ -80,10 +81,18 @@ export default function Home() {
     const next = generateRandomPopup();
     if (next) {
       setNextPopupTime(next);
+       if (!checkedInLoggedRef.current) {
+        log('You are checked in.', 'log-init');
+        checkedInLoggedRef.current = true;
+      }
+      
       // this log for test what time to random popup
       log(`Random popup scheduled at: ${next.toLocaleTimeString()}`, "log-action");
 
-      log('You are checked in.', 'log-init');
+       if (!checkedInLoggedRef.current) {
+        log('You are checked in.', 'log-init');
+        checkedInLoggedRef.current = true;
+      }
     } else {
       log("You are not checked in", "log-action");
     }
