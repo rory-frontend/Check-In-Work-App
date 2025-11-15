@@ -13,8 +13,8 @@ export default function Home() {
   const [startCounting, setStartCounting] = useState(false);
   const [nextPopupTime, setNextPopupTime] = useState<Date | null>(null);
   // User input for start and end times
-  const [startTime, setStartTime] = useState('14:45');
-  const [endTime, setEndTime] = useState('14:55');
+  const [startTime, setStartTime] = useState('09:00');
+  const [endTime, setEndTime] = useState('11:00');
 
   const missedTimerRef = useRef<number | null>(null);
   const popupTimerRef = useRef<number | null>(null);
