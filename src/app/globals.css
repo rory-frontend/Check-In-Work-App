@@ -17,6 +17,10 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+
+  .button {
+    @apply  py-1 text-2xl font-medium rounded-md w-fit px-3 cursor-pointer
+  }
 }
 
 body {
