@@ -80,7 +80,9 @@ export default function Home() {
     const next = generateRandomPopup();
     if (next) {
       setNextPopupTime(next);
+      // this log for test what time to random popup
       log(`Random popup scheduled at: ${next.toLocaleTimeString()}`, "log-action");
+
       log('You are checked in.', 'log-init');
     } else {
       log("You are not checked in", "log-action");
@@ -138,7 +140,7 @@ export default function Home() {
     setShowPopup(false);
 
     if (startCounting) {
-      log(`Popup clicked after ${formatTime(missedTime)}`, 'log-popup text-red-500');
+      log(`Your missed ${formatTime(missedTime)}`, 'log-popup text-red-500');
     } else {
       log(`I'm Here`, 'log-popup text-green-500');
     }
